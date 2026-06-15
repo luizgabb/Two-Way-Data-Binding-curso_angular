@@ -1,4 +1,7 @@
 <h1>Jesus Salva</h1>
-<input type="text">
+<input type="text"  [(ngModel)]="name" (ngModelChange)=
+"handleInputChange($event)"
+>
 
 <h1>Nome digitando: {{name}}</h1>
+
