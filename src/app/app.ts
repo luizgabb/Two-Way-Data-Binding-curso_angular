@@ -10,5 +10,6 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('Two-Way-Data-Binding');
+
   listPessoas = ['Pedro', 'Thiago', 'João', true, 1000]
 }
