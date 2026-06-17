@@ -10,6 +10,16 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('Two-Way-Data-Binding');
+  personSelectedIndex: number | undefined;
+  listPessoas =[
+    {name: 'Luiz Gabriel', age: 26},
+    {name: 'Pedro', age: 34},
+    {name: 'Tiago', age: 55},
+    {name: 'João', age: 18},
+  ];
 
-  listPessoas = ['Pedro', 'Thiago', 'João', true, 1000]
+  selectPerson(index: number) {
+    console.log(index);
+    this.personSelectedIndex = index;
+  }
 }
