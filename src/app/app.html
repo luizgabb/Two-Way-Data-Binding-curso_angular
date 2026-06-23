@@ -1,20 +1,5 @@
-<div class="list">
-  @for (person of listPessoas; track person.name + person.age; let i = $index; let isOdd = $odd; let isFirst = $first; let isLast = $last) {
-    <div class="item"
-         [class.item--odd]="isOdd"
-         [class.item--highlighted]="personSelectedIndex === i"
-         (click)="selectPerson(i)">
+<h1 [class]="pessoa.status | statusClass">{{pessoa.name}}</h1>
 
-      <p class="item__name">{{ i }} - {{ person.name }}</p>
-      <p class="item__age">{{ person.age }} anos</p>
+<h1 [class]="pessoa2.status | statusClass">{{pessoa2.name}}</h1>
 
-      @if (isFirst) {
-        <p class="item__age">É o primeiro</p>
-      }
-
-      @if (isLast) {
-        <p class="item__age">É o último</p>
-      }
-    </div>
-  }
-</div>
+<h1 [class]="pessoa3.status | statusClass">{{pessoa3.name}}</h1>
