@@ -1,25 +1,30 @@
+import { CommonModule, UpperCasePipe } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { StatusClassPipe } from './pipes/status-class.pipe';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FormsModule, CommonModule, StatusClassPipe],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
   protected readonly title = signal('Two-Way-Data-Binding');
-  personSelectedIndex: number | undefined;
-  listPessoas =[
-    {name: 'Luiz Gabriel', age: 26},
-    {name: 'Pedro', age: 34},
-    {name: 'Tiago', age: 55},
-    {name: 'João', age: 18},
-  ];
+  pessoa = {
+    name: 'Caminho',
+    status:1
+  };
+  pessoa2 = {
+    name: 'Verdade',
+    status:2
+  };
+  pessoa3 = {
+    name:'Vida',
+    status:3
+  };
 
-  selectPerson(index: number) {
-    console.log(index);
-    this.personSelectedIndex = index;
-  }
+
+
 }
